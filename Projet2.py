@@ -13,35 +13,54 @@
 
 #Sinon, c'est possible.
 #1:BOUCLE FOR Comparer les premières lettres de chaque mots. Si elles sont égales, passer à une autre lettre
-#2:     Sinon, identifier l'apparition la plus fréquente d'une lettre dans chaque mots,
+#2:     Sinon, identifier l'apparition la plus fréquente d'une lettre dans chaque mots, -------------------------------------------------------------------------------< do dat
 #3:     Vérifier celles qui n'ont pas cette lettre (ce seront les mots ayant besoin de modifs)
 #4:     Vérifier la lettre d'avant de ces mots. Si elles sont les mêmes que la lettre majoritaire, utiliser la règle un (inserer cette lettre)
 #5:     Sinon,s'assurer que la lettre est identique à la lettre d'avant utiliser la règle deux (retire cette lettre et décaler vers la gauche)
 #5(suite):      TANT QUE l'on obtient pas la bonne lettre
 
-ATTENTION : Se garder une variable nombre de règle qui commence à 0 et incrémente chaque fois que l'on utilise une règle.
-#signé Johnny (tour 1)
+#ATTENTION : Se garder une variable nombre de règle qui commence à 0 et incrémente chaque fois que l'on utilise une règle.
+#signé Johnny (tour 1) <-wow, doge!
 
 #FRAME
 
 ###################################################################
 ## Initialisation des variables
 ###################################################################
-
-
-
+T = 0 #number of tests
+N = 0 #number of strings to test
 
 ###################################################################
 ##  Prendre les inputs
 ###################################################################
-
-
+with open("A-small-practice.in", "r+") as file:
+	T = int(file.readline())
+	
+	###################################################################
+	## Mémoriser les mots de chaques tests
+	###################################################################
+	for i in range (1, T): #Do all cases
+		N = int(file.readline())
+		strings = []
+		
+		for j in range (0, N): #Get all strings
+			strings.append(file.readline())
+	
+		###################################################################
+		##  Utiliser l'algo (compare strings)
+		###################################################################
+		#Auto Fegla Won
+		#if(len(strings[0]) != len(strings[1])):
+		
+		#Compare letters, if they're the same, leave as is
+		for letter0 in strings[0]:
+			for letter1 in strings[1]:
+				if letter0 == letter1:
+					print("next")
 
 ###################################################################
-## Mémoriser les mots de chaques tests
+##  Output
 ###################################################################
-
-
-###################################################################
-##  Utiliser l'algo
-###################################################################
+x = 1
+y = 0
+print("Case #" + str(x) + ": " + str(y))
